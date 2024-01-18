@@ -14,28 +14,28 @@ for(let i=1; i<=100; i++){
 
 // Part 2 Prime Time
 
-// function findNextPrime(n) {
-//     while (true) {
-//       n++;
-//       if (isPrime(n)) {
-//         console.log(n);
-//         break; // Exit the loop once a prime number is found
-//       }
-//     }
-//    }
-   
-//    function isPrime(num) {
-//     if (num <= 1) {
-//       return false;
-//     }
-//     for (let i = 2; i <= Math.sqrt(num); i++) {
-//       if (num % i === 0) {
-//         return false;
-//       }
-//     }
-//     return true;
-//    }
-   
-//    // Example usage:
-//    findNextPrime(35); // Outputs 11
+function myFunction(a) {
+    for (i = 2; i <= a - 1; i++) {
+        if (a % i == 0) {
+            console.log("Not Prime");
+            while(true) {
+                a++;
+                let isPrime = true;
+                for (i = 2; i <= a - 1; i++) {
+                    if (a % i == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime){
+                    console.log(a);
+                    return;
+                }
+            }
+        }
+    }
+    console.log("Prime");
+}
+
+myFunction(70)
 
